@@ -1,0 +1,26 @@
+dic={}
+
+while True:
+    mes = str(input('Digite o mês: '))
+    temp = float(input('Digite a temperatura média: '))
+    
+    dic[mes] = temp
+    print('********************************')
+    for x in dic:
+        print('Meses digitados: {}'.format(x))
+    print('********************************')
+    dec = int(input('1.Inserir o próximo mês\n''2.Finalizar\n'))
+    
+    while dec != 1 and dec != 2 :
+        dec = int(input('Digite uma opção valida!!'))
+   
+    if dec == 1:
+        continue
+    elif dec == 2:
+        break    
+    
+soma_dic = sum(dic.values())
+qtde_dic = len(dic.values())
+media = soma_dic / qtde_dic
+print('Lista detalhada: {}'.format(dic))
+print('A média de temperatura dos meses foi de: {}'.format(media))
